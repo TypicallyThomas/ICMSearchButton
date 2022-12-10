@@ -44,10 +44,10 @@
     }
 
     window.onload = function () {
-        if (window.location.href.match(/.+\.com\/movies\/.+/) != null) {
+        if (window.location.href.match(/.+\.com\/movies\/.+/i) != null) {
             console.log("movie")
             let title = document.querySelector("h1").innerHTML;
-            let movieElement = document.querySelector("#movie");
+            let movieElement = document.querySelector(".movie");
             addSearchButtonToElement(movieElement, title);
         } else if (window.location.href.match(/.+\.com\/movies\/$|.+\.com\/lists\/.+/i) != null) {
             let listOfMovieElements = document.querySelectorAll("li.listItemMovie");
