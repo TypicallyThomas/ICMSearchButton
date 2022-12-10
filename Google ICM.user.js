@@ -35,7 +35,6 @@
             newOptionItem.title = `Search ${title} on Google Video`;
             newOptionListItem.appendChild(newOptionItem);
             optionListMenu.appendChild(newOptionListItem);
-            console.log(newOptionItem);
         }
         else {
             console.log("Failed to find optionListMenu")
@@ -45,7 +44,6 @@
 
     window.onload = function () {
         if (window.location.href.match(/.+\.com\/movies\/.+/i) != null) {
-            console.log("movie")
             let title = document.querySelector("h1").innerHTML;
             let movieElement = document.querySelector(".movie");
             addSearchButtonToElement(movieElement, title);
